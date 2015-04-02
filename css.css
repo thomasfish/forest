@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 40px;
+  background: #333;
+  color: #08FA00;
+  font-family: monospace;
+}
+p {
+  margin: 20px;
+  font-size: 30px;
+}
+p a {
+  color: #2CAD0C;
+  opacity: 0.7;
+  /*transition: opacity 0.5s;*/
+  display: inline-block;
+  position: relative;
+  z-index: 9999999999999999999999;
+}
+p a:hover {
+  opacity: 0.5;
+}
+p i {
+  font-style: normal;
+  -webkit-animation-name: blinker;  
+  -webkit-animation-iteration-count: infinite;  
+  -webkit-animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+  -webkit-animation-duration: 1s;
+  animation-name: blinker;  
+  animation-iteration-count: infinite;  
+  animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+  animation-duration: 1s; 
+}
+.stripes {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(transparent 50%, rgba(255,255,255,.05) 50%);
+  background-size: 20px 20px;
+}
+.radial {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: -webkit-radial-gradient(transparent, rgba(0,0,0,0.7));
+  background: -o-radial-gradient(transparent, rgba(0,0,0,0.7));
+  background: -moz-radial-gradient(transparent, rgba(0,0,0,0.7));
+  background: radial-gradient(transparent, rgba(0,0,0,0.7));
+}
+
+@-webkit-keyframes blinker {  
+  from { opacity: 0.8; }
+  to { opacity: 0.0; }
+}
+@keyframes blinker {  
+  from { opacity: 0.8; }
+  to { opacity: 0.0; }
+}
